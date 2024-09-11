@@ -1,0 +1,33 @@
+name: build docker
+
+on:
+  workflow_dispatch:
+
+jobs:
+
+  build:
+    runs-on: ubuntu-latest
+  permissions:
+      contents: read
+      packages: write
+  
+  steps:
+    - uses: actions/checkout@v2
+    
+    # Conexão com Registro de Container
+    #- uses: azure/docker-login@v1
+    #  whith:
+    #      login-server: acrbuild.io
+    #      username: "dockerImage"
+    #      password: ${{ secrets.GITHUB_TOKEN }}
+    #
+
+    # Build da Imagem
+    #- name: Build Docker Image
+    #  run: |
+    #     docker build . --file Dockerfile --tag acrbuild.io/docker-imagem/docker-image:latest
+    
+    # Publicação Imagem no Registro de Contianer
+    #- name: Docker Push
+    # run: |
+    #    docker push acrbuild.io/docker-image/docker-image:latest      
