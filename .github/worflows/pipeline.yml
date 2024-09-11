@@ -26,6 +26,7 @@ jobs:
     #- name: Build Docker Image
     #  run: |
     #     docker build . --file Dockerfile --tag acrbuild.io/docker-imagem/docker-image:latest
+
     
     # Publicação Imagem no Registro de Contianer
     #- name: Docker Push
