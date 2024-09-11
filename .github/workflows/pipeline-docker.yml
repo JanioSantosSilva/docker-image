@@ -11,9 +11,9 @@ jobs:
       contents: read
       packages: write
   
-  steps:
-    - uses: actions/checkout@v3
-    
+    steps:
+       - uses: actions/checkout@v2
+
     # Conexão com Registro de Container
     #- uses: azure/docker-login@v1
     #  whith:
@@ -31,4 +31,4 @@ jobs:
     # Publicação Imagem no Registro de Contianer
     #- name: Docker Push
     # run: |
-    #    docker push acrbuild.io/docker-image/docker-image:latest      
+    #    docker push acrbuild.io/docker-image/docker-image:latest   
